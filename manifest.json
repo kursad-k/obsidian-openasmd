@@ -1,0 +1,10 @@
+{
+  "id": "open-as-md",
+  "version": "0.0.3",
+  "description": "Edit non-md files as markdown files",
+  "name": "open as md",
+  "author": "kursadk",
+  "authorUrl": "https://github.com/kursad-k",
+  "isDesktopOnly": false,
+  "minAppVersion": "0.10.12"
+}

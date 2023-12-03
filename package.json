@@ -1,0 +1,24 @@
+{
+  "name": "txt-as-md-obsidian",
+  "version": "0.0.1",
+  "description": "Edit txt files as if they were markdown",
+  "main": "main.js",
+  "scripts": {
+    "install-deps": "npm install",
+    "dev": "rollup --config rollup.config.js --watch",
+    "build": "rollup --config rollup.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@types/node": "^14.14.22",
+    "obsidian": "latest",
+    "rollup": "^2.79.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
+  }
+}
