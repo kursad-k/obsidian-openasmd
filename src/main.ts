@@ -20,7 +20,7 @@ export default class OpenAsMd extends Plugin {
     super.onload();
     await this.loadSettings();
     this.addSettingTab(new SampleSettingTab(this.app, this));
-    this.registerExtensions(["txt","tid","ini","nfo","py","config","json"], "markdown");
+    this.registerExtensions(["txt","tid","ini","nfo","py","config","json","sh","lua"], "markdown");
     // this.registerExtensions(["ini"], "markdown");
     // this.registerExtensions(["nfo"], "markdown");
     // this.registerExtensions(["py"], "markdown");
