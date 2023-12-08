@@ -6,13 +6,21 @@ import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Set
 
 interface OpenAsMdSettings {
 	mySetting: string;
+	mySettingArray:string[];
+}
+
+interface OpenAsMdSettingsArray {
+	mySettingArray:string[];
 }
 
 const DEFAULT_SETTINGS: OpenAsMdSettings = {
-	mySetting: 'txt,nfo,json'
+	mySetting: 'txt,nfo,json',
+	// mySettingArray:mySetting.split(",")
+	mySettingArray:["txt","tid","ini"]
 }
 
 export default class OpenAsMd extends Plugin {
+	// settings: OpenAsMdSettings;
 	settings: OpenAsMdSettings;
 
 	async onload() {
@@ -20,7 +28,13 @@ export default class OpenAsMd extends Plugin {
     super.onload();
     await this.loadSettings();
     this.addSettingTab(new SampleSettingTab(this.app, this));
-    this.registerExtensions(["txt","tid","ini","nfo","py","config","json","sh","lua"], "markdown");
+	
+	// const formatsArray = (this.settings as unknown as string).split(",");
+	// console.log(this.settings.mySetting);
+	this.settings.mySettingArray=this.settings.mySetting.split(",");
+	console.log("array->"+this.settings.mySettingArray);
+	console.log("array->");
+	this.registerExtensions(["txt","tid","ini","nfo","py","config","json","sh","lua"], "markdown");
     // this.registerExtensions(["ini"], "markdown");
     // this.registerExtensions(["nfo"], "markdown");
     // this.registerExtensions(["py"], "markdown");
@@ -105,6 +119,7 @@ export default class OpenAsMd extends Plugin {
 
 	async saveSettings() {
 		await this.saveData(this.settings);
+		// console.log(this.settings)
 	}
 
 }
