@@ -1,10 +1,13 @@
-# txt as md Obsidian plugin
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/deathau/txt-as-md-obsidian?style=for-the-badge&sort=semver)](https://github.com/deathau/txt-as-md-obsidian/releases/latest)
-![GitHub All Releases](https://img.shields.io/github/downloads/deathau/txt-as-md-obsidian/total?style=for-the-badge)
 
-A plugin for [Obsidian](https://obsidian.md) which allows editing of txt files as if they were markdown.
 
-![Screenshot](https://github.com/deathau/txt-as-md-obsidian/raw/main/screenshot.png)
+
+### How it works
+
+This plugin lets you edit non-markdown files in Obsidian as if they are .md files. You can set the extension of the file type you want to be able to edit in Obsidian by setting the extension in the plugin's settings window. Please be sure to separate them by commas as shown in the image below.
+
+
+![Alt text](image.png)
+
 
 ### Compatibility
 
@@ -13,7 +16,7 @@ The required APIs were only added in Obsidian **0.10.12**, and as such, that is 
 ## Installation
 
 ### From within Obsidian
-From Obsidian v0.9.8, you can activate this plugin within Obsidian by doing the following:
+You can activate this plugin within Obsidian by doing the following:
 - Open Settings > Third-party plugin
 - Make sure Safe mode is **off**
 - Click Browse community plugins
@@ -32,12 +35,6 @@ Note: On some machines the `.obsidian` folder may be hidden. On MacOS you should
 Otherwise head to Settings, third-party plugins, make sure safe mode is off and
 enable the plugin from there.
 
-## Security
-> Third-party plugins can access files on your computer, connect to the internet, and even install additional programs.
-
-The source code of this plugin is available on GitHub for you to audit yourself, but installing plugins into Obsidian is currently a matter of trust.
-
-I can assure you here that I do nothing to collect your data, send information to the internet or otherwise do anything nefarious with your system. However, be aware that I *could*, and you only have my word that I don't.
 
 ## Development
 
@@ -64,9 +61,7 @@ Huh? This is an open-source plugin I made *for fun*. It's completely free.
 However, if you absolutely *have* to send me money because you like it that
 much, feel free to throw some coins in my hat via the following:
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/deathau?style=social)](https://github.com/sponsors/deathau)
-[![Paypal](https://img.shields.io/badge/paypal-deathau-yellow?style=social&logo=paypal)](https://paypal.me/deathau)
 
 # Version History
-## 0.0.1
+## 0.0.3
 Initial release!
