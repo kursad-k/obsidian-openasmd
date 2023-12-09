@@ -16,19 +16,16 @@ export default class OpenAsMd extends Plugin {
 	settings: OpenAsMdSettings;
 
 	async onload() {
-		console.log("---ONLOAD2---");
 		super.onload();
 		await this.loadSettings();
 		this.addSettingTab(new SampleSettingTab(this.app, this));
 
 		this.settings.mySettingArray = this.settings.mySetting.split(",");
-		console.log("array->" + this.settings.mySettingArray);
 		this.registerExtensions(this.settings.mySettingArray, "markdown");
 
 	}
 
 	onunload() {
-		console.log("---ONUNLOAD2---");
 	}
 
 	async loadSettings() {
@@ -48,7 +45,6 @@ class SampleSettingTab extends PluginSettingTab {
 	constructor(app: App, plugin: OpenAsMd) {
 		super(app, plugin);
 		this.plugin = plugin;
-		console.log("---SETTINGSTAB---");
 	}
 
 	display(): void {
