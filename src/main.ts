@@ -1,6 +1,4 @@
-// import { Plugin } from 'obsidian';
-
-import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
+import { App, Editor, MarkdownView, Plugin, PluginSettingTab, Setting } from 'obsidian';
 
 
 interface OpenAsMdSettings {
@@ -8,10 +6,8 @@ interface OpenAsMdSettings {
 	mySettingArray:string[];
 }
 
-
 const DEFAULT_SETTINGS: OpenAsMdSettings = {
 	mySetting: 'txt,nfo,json',
-	
 	mySettingArray:["txt","tid","ini"]
 }
 
@@ -41,11 +37,10 @@ export default class OpenAsMd extends Plugin {
 
 	async saveSettings() {
 		await this.saveData(this.settings);
-		// console.log(this.settings)
+	
 	}
 
 }
-
 
 class SampleSettingTab extends PluginSettingTab {
 	plugin: OpenAsMd;
