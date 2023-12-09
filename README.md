@@ -5,6 +5,8 @@
 
 This plugin lets you edit non-markdown files in Obsidian as if they are .md files. You can set the extension of the file type you want to be able to edit in Obsidian by setting the extension in the plugin's settings window. Please be sure to separate them by commas as shown in the image below.
 
+You need to disable and enable the plugin after setting the file extensions.
+
 
 ![Alt text](image.png)
 
