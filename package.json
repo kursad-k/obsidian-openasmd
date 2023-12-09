@@ -1,7 +1,7 @@
 {
-  "name": "txt-as-md-obsidian",
-  "version": "0.0.1",
-  "description": "Edit txt files as if they were markdown",
+  "name": "open-as-md",
+  "version": "0.0.8",
+  "description": "Edit non-md file types as markdown files",
   "main": "main.js",
   "scripts": {
     "install-deps": "npm install",
@@ -19,6 +19,9 @@
     "obsidian": "latest",
     "rollup": "^2.79.1",
     "tslib": "^2.1.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "tsc": "^2.0.4"
   }
 }

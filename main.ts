@@ -3,12 +3,12 @@ import { App, Editor, MarkdownView, Plugin, PluginSettingTab, Setting } from 'ob
 
 interface OpenAsMdSettings {
 	mySetting: string;
-	mySettingArray:string[];
+	mySettingArray: string[];
 }
 
 const DEFAULT_SETTINGS: OpenAsMdSettings = {
 	mySetting: 'txt,nfo,json',
-	mySettingArray:["txt","tid","ini"]
+	mySettingArray: ["txt", "tid", "ini"]
 }
 
 export default class OpenAsMd extends Plugin {
@@ -16,28 +16,28 @@ export default class OpenAsMd extends Plugin {
 	settings: OpenAsMdSettings;
 
 	async onload() {
-		
-    super.onload();
-    await this.loadSettings();
-    this.addSettingTab(new SampleSettingTab(this.app, this));
+		console.log("---ONLOAD2---");
+		super.onload();
+		await this.loadSettings();
+		this.addSettingTab(new SampleSettingTab(this.app, this));
 
-	this.settings.mySettingArray=this.settings.mySetting.split(",");
-	// console.log("array->"+this.settings.mySettingArray);
-	this.registerExtensions(this.settings.mySettingArray, "markdown");
+		this.settings.mySettingArray = this.settings.mySetting.split(",");
+		console.log("array->" + this.settings.mySettingArray);
+		this.registerExtensions(this.settings.mySettingArray, "markdown");
 
-		
 	}
 
 	onunload() {
-    }
+		console.log("---ONUNLOAD2---");
+	}
 
 	async loadSettings() {
 		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
-    }
+	}
 
 	async saveSettings() {
 		await this.saveData(this.settings);
-	
+
 	}
 
 }
@@ -48,10 +48,11 @@ class SampleSettingTab extends PluginSettingTab {
 	constructor(app: App, plugin: OpenAsMd) {
 		super(app, plugin);
 		this.plugin = plugin;
+		console.log("---SETTINGSTAB---");
 	}
 
 	display(): void {
-		const {containerEl} = this;
+		const { containerEl } = this;
 
 		containerEl.empty();
 
