@@ -8,13 +8,10 @@ interface OpenAsMdSettings {
 	mySettingArray:string[];
 }
 
-interface OpenAsMdSettingsArray {
-	mySettingArray:string[];
-}
 
 const DEFAULT_SETTINGS: OpenAsMdSettings = {
 	mySetting: 'txt,nfo,json',
-	// mySettingArray:mySetting.split(",")
+	
 	mySettingArray:["txt","tid","ini"]
 }
 
@@ -29,7 +26,7 @@ export default class OpenAsMd extends Plugin {
     this.addSettingTab(new SampleSettingTab(this.app, this));
 
 	this.settings.mySettingArray=this.settings.mySetting.split(",");
-	console.log("array->"+this.settings.mySettingArray);
+	// console.log("array->"+this.settings.mySettingArray);
 	this.registerExtensions(this.settings.mySettingArray, "markdown");
 
 		
