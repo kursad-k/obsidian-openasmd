@@ -1,6 +1,6 @@
 {
   "id": "open-as-md",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Edit non-md files as markdown files",
   "name": "open as md",
   "author": "kursadk",
