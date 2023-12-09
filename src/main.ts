@@ -28,24 +28,10 @@ export default class OpenAsMd extends Plugin {
     super.onload();
     await this.loadSettings();
     this.addSettingTab(new SampleSettingTab(this.app, this));
-	
-	// const formatsArray = (this.settings as unknown as string).split(",");
-	// console.log(this.settings.mySetting);
+
 	this.settings.mySettingArray=this.settings.mySetting.split(",");
 	console.log("array->"+this.settings.mySettingArray);
-	console.log("array->");
-	this.registerExtensions(["txt","tid","ini","nfo","py","config","json","sh","lua"], "markdown");
-    // this.registerExtensions(["ini"], "markdown");
-    // this.registerExtensions(["nfo"], "markdown");
-    // this.registerExtensions(["py"], "markdown");
-    // this.registerExtensions(["html"], "markdown");
-    // this.registerExtensions(["tid"], "markdown");
-    // this.registerExtensions(["config"], "markdown");
-    // this.registerExtensions(["json"], "markdown");
-    // this.registerExtensions(["conf"], "markdown");
-    // this.registerExtensions(["tid"], "markdown");
-    // this.registerExtensions(["TID"], "markdown");
-    // this.registerExtensions(["tid"], "markdown");
+	this.registerExtensions(this.settings.mySettingArray, "markdown");
 
 		// // This creates an icon in the left ribbon.
 		// const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
