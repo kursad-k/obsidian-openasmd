@@ -37,31 +37,23 @@ Note: On some machines the `.obsidian` folder may be hidden. On MacOS you should
 Otherwise head to Settings, third-party plugins, make sure safe mode is off and
 enable the plugin from there.
 
-
 ## Development
 
 This project uses Typescript to provide type checking and documentation.  
 The repo depends on the latest [plugin API](https://github.com/obsidianmd/obsidian-api) in Typescript Definition format, which contains TSDoc comments describing what it does.
-
-**Note:** The Obsidian API is still in early alpha and is subject to change at any time!
 
 If you want to contribute to development and/or just customize it with your own
 tweaks, you can do the following:
 - Clone this repo.
 - `npm i` or `yarn` to install dependencies
 - `npm run build` to compile.
-- Copy `manifest.json`, `main.js` and `styles.css` to a subfolder of your plugins
+- Copy `manifest.json`, `main.js`
 folder (e.g, `<vault>/.obsidian/plugins/<plugin-name>/`)
 - Reload obsidian to see changes
 
 Alternately, you can clone the repo directly into your plugins folder and once
 dependencies are installed use `npm run dev` to start compilation in watch mode.  
 You may have to reload obsidian (`ctrl+R`) to see changes.
-
-## Pricing
-Huh? This is an open-source plugin I made *for fun*. It's completely free.
-However, if you absolutely *have* to send me money because you like it that
-much, feel free to throw some coins in my hat via the following:
 
 
 # Version History
