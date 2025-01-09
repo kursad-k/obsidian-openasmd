@@ -20,7 +20,10 @@ export default class OpenAsMd extends Plugin {
 		await this.loadSettings();
 		this.addSettingTab(new SampleSettingTab(this.app, this));
 
-		this.settings.mySettingArray = this.settings.mySetting.split(",");
+		// Split and filter out "docx" from the extension list
+		this.settings.mySettingArray = this.settings.mySetting
+			.split(",")
+			.filter((ext) => ext !== "docx");
 		this.registerExtensions(this.settings.mySettingArray, "markdown");
 
 	}
